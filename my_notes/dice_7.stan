@@ -17,6 +17,11 @@ model {
 }
 
 generated quantities { // do this step to flip mu to theta (the parm we care about)
+  real log_lik[N];
   real<lower=0, upper=1> theta;
   theta = inv_logit(mu);
+  
+  for (i in 1:N){
+    log_lik[i] = bernoulli_logit_lpmf(y[i] | mu); //log probability mass function
+  }
 }
