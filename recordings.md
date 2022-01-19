@@ -3,8 +3,8 @@ These are password protected, and you will have been given this password in the 
 
 # Day 1
 
-* Session 1
-* Session 2
+* [Session 1](https://vimeo.com/667425965)
+* [Session 2](https://vimeo.com/667497581)
 
 # Day 2
 
