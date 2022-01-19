@@ -67,11 +67,3 @@ log_lik_7 <- extract_log_lik(dice_7_model, merge_chains = FALSE)
 r_eff_7 <- relative_eff(exp(log_lik_7))
 
 loo(dice_7_model, r_eff = r_eff_7)
-
-
-# normal inference ------------------------------------------------------------------
-math_df <- read_csv("data/MathPlacement.csv")
-
-#see some data drawn from normal distribution 
-ggplot(math_df, aes(x=ACTM)) +
-  geom_histogram(bins=50)
