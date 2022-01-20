@@ -3,7 +3,6 @@ data {
   int<lower=1> K;
   matrix[N, K+1] X;
   vector[N] y;
-  
   //hyperparameters
   real<lower=0> tau;
   real<lower=0> nu;
@@ -24,7 +23,6 @@ model {
   //priors with hyperparameters
   beta ~ normal(0, tau); 
   sigma ~ student_t(nu, 0, omega);
-  
   //likelihood model
   y ~ normal(mu, sigma);
 }

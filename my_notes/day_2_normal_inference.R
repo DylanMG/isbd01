@@ -52,8 +52,6 @@ weight_df <- read_csv("data/weight.csv")
 #need to sort out some coding for categorical vars
 library(modelr)
 
-
-
 #deals with the handedness variable - needs to be coded as dummy vars w/ 0,1
 X <- select(weight_df,
             weight, height, age, gender, handedness) %>% 
